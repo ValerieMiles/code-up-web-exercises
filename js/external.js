@@ -93,7 +93,24 @@
 
 
 
+    //Student Enrollment Eligibility
+    var isclassfull = false;
+    var scheduleopen = true;
+    var classopen = true;
+    var studentcanenroll = isclassfull && scheduleopen;
+    alert("Student is eligible to enroll in class.");
 
+
+    //Product Offer (Based on eligibility)
+    var itemsbought = Number(prompt("How many items did you purchase?"));
+    var confirmifofferexpired = prompt("Did the offer expire? " + " Answer 'Yes' or 'No''");
+    var premiummember = prompt("Are you a Premium Member?");
+    var applyoffer = itemsbought >= 2 && (confirmifofferexpired = "No");
+    if (applyoffer == true) {
+        alert("You qualify for the product offer");
+    }else{
+            alert("You do not qualify for this offer.")
+    }
 
 
 
