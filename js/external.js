@@ -100,6 +100,13 @@
     var studentcanenroll = isclassfull && scheduleopen;
     alert("Student is eligible to enroll in class.");
 
+    //class discussion Class Schedule
+    var classIsFull = confirm("Is the class you are trying to join full?");
+
+    var hasScheduleConflicts = confirm("Do you have a class at 2:30pm already?");
+
+    alert("You can join the class is a " + (classIsFull && hasScheduleConflicts) + " statement");
+
 
     //Product Offer (Based on eligibility)
     var itemsbought = Number(prompt("How many items did you purchase?"));
@@ -112,6 +119,20 @@
             alert("You do not qualify for this offer.")
     }
 
+    //class discussion Product Offer
+    var hasMoreThanTwoItems = confirm("Do you  have more than two items in your cart?");
+
+    var isOfferValid = confirm("Is the offer still valid?");
+
+    var isPremiumMember = confirm("Are you a premium member?");
+
+    var canUserUseOffer = (hasMoreThanTwoItems || isPremiumMember) && isOfferValid;
+
+    alert("You can use this offer is a " + canUserUseOffer + " statement.");
+
+    //You can also do this
+    // var hasEnoughItems = hasMoreThanTwoItems  || isPremiumMember;
+    // var canUserUseOffer = hasEnoughItems && isOfferValid;
 
 
 
