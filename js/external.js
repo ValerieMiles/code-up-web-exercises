@@ -17,7 +17,8 @@
     var Hercules = parseInt(prompt( "How many days have you had the Hercules?"));
 
     //we can add all the values the use has given to see a total of how much is owed
-    var totalOwed = (litteMermaid + BrotherBear + Hercules) * 3;
+    var totalOwed = ((littleMermaid + BrotherBear + Hercules) * 3);
+
 
     alert("You owe BlockBuster " + totalOwed);
 
@@ -35,19 +36,61 @@
 
     var totalFromFacebook = hoursWorkedForFacebook * 350;
 
-    alert("You have made a total of $" + totalFromGoogle + totalFromAmazon + totalFromFacebook) + " this week!");
+    var totalPay = (totalFromGoogle + totalFromFacebook + totalFromAmazon)
+
+    alert("You have made a total of $" + totalPay + " this week!");
 
 
 
 
 
-
+    //code for total pay per hour Amazon, Google & Facebook
     var userInput1 = prompt("What is your hourly pay at Google?");
-    alert("This is my pay rate at Google: " + userInput1 + " per hour.");
+
+    alert("This is my pay rate at Google: $" + userInput1 + " per hour.");
+
+    var userInputHoursWorkedGoogle = Number(prompt("How many hours did you work this week?"));
+
+    var totalpayGoogle = (userInput1 * 6);
+
+    alert("You have earned $ " + totalpayGoogle + " this week!");
+
     var userInput2 = prompt("What is your hourly pay at Amazon?");
-    alert("This is my pay rate at Amazon: " + userInput2 + " per hour.");
+
+    alert("This is my pay rate at Amazon: $" + userInput2 + " per hour.");
+
+    var userInputHoursWorkedAmazon = Number(prompt("How many hours did you work this week?"));
+
+    var totalpayAmazon = (userInput2 * 4);
+
+    alert("You have earned $ " + totalpayAmazon + " this week!");
+
     var userInput3 = prompt("What is your hourly pay at Facebook?");
-    alert("This is my pay rate at Facebook: " + userInput3 + " per hour.");
+
+    alert("This is my pay rate at Facebook: $" + userInput3 + " per hour.");
+
+    var totalpayFacebook = (userInput3 * 10);
+
+    alert("You have earned $ " + totalpayFacebook + " this week!");
+
+    var  grandtotalfortheweek = (totalpayGoogle + totalpayAmazon + totalpayFacebook);
+
+
+
+
+
+
+    // code for movie rentals total cost
+    var LittleMermaidDaysRented = Number(prompt("How many days did you rent LittleMerMaid?"));
+
+    var BrotherBearDaysRented = Number(prompt("How many days did you rent BrotherBear?"));
+
+    var HerculesDaysRented = Number(prompt("How many days did you rent Hercules?"));
+
+    var TotalDueMovieRentals = ((LittleMermaidDaysRented * 3) + (BrotherBearDaysRented * 3) + (HerculesDaysRented * 3))
+
+    alert("You owe a total of $ " + TotalDueMovieRentals + ".")
+
 
 
 
