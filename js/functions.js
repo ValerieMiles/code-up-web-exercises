@@ -1,5 +1,13 @@
 "use strict";
 
+(function (){       //create IFFE at top of code, console will not see the variable
+var car = "Honda Civic";
+})(); //can move this last line of IFFE to bottom of page  - Uncaught reference " "  is not defined
+//they can still use the console, but they would not have access to those functions
+//they can still look at the code, but they can't use it, good practice to wrap your code in an IFFE
+//wrap all of your Javascript functions in an IFFE; especially prior to publishing your code on the web
+//all commands will no longer be on a global scope
+console.log(car);
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -142,6 +150,11 @@ function calculateTip(tipPercentage, billTotal){
 //check in console with calculateTip(.10, 100) returns 10 = $10.00
 
 function calculateTip(tipPercentage, billTotal) {  //alternate expression
+    // var tip = billTotal + tipPercentage;
+    //return tip;
+
+    //return tip.toFixed(2)  option
+
     return billTotal * tipPercentage; //alternate calculation
 }
 
@@ -152,6 +165,17 @@ function calculateTip(tipPercentage, billTotal) {  //alternate expression
  * then display the dollar amount they should tip
  */
 
+var billTotal = Number(prompt( "How much was your bill?"));
+
+var tipPercent = Number(prompt("What percentage would you like to tip?"));
+
+// console.log(Number("3.25244523").toFixed(2));  optional
+
+var calculatedTip = calculateTip(tipPercent, billTotal);
+
+var tipMessage = "You would tip $" + calculateTip;
+
+alert(tipMessage);
 
 
 
@@ -169,3 +193,12 @@ function calculateTip(tipPercentage, billTotal) {  //alternate expression
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(price, discountPercent){
+    var discountedPrice = price - (price * discountPercent);
+    return discountPrice.toFixed(2);
+
+}
+
+console.log(applyDiscount(30.78, 0.05).toFixed(2));
+
