@@ -142,6 +142,7 @@ or console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+
 function calculateTip(tipPercentage, billTotal){
     var tip = billTotal * tipPercentage;
     return tip;
