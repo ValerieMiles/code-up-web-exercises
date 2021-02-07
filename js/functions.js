@@ -21,7 +21,7 @@ function sayHello(name) {
     return "Hello, " + name + "!";
 }
 
-console.log(sayHello("John")); //to see the results of a function surroound with console.log
+console.log(sayHello("John")); //to see the results of a function surround with console.log
 
 
 
@@ -69,7 +69,7 @@ console.log(helloMessage);
  */
 
 
-var = myName = sayHello("Samuel"); //use function above
+var myName = sayHello("Samuel"); //use function above
 
 console.log(sayHello(myName)); //pass variable into a function to pass that string
 
@@ -83,7 +83,6 @@ console.log(sayHello(myName)); //pass variable into a function to pass that stri
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
-
 
 
 /**
@@ -174,7 +173,7 @@ var tipPercent = Number(prompt("What percentage would you like to tip?"));
 
 var calculatedTip = calculateTip(tipPercent, billTotal);
 
-var tipMessage = "You would tip $" + calculateTip;
+var tipMessage = "You would tip $" + calculateTip;//console.log message w/ tip amount could go here.
 
 alert(tipMessage);
 
