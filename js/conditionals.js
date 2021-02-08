@@ -29,19 +29,31 @@ function analyzeColor(color) {
         return "blue is the color of the sky.";
 
     } else if (color === 'red') {
-        return "Strawberries are red.";
+        return "Strawberries are red.";//"Strawberries are " + color; alternate option/dynamic message
 
     } else if (color === 'cyan') {
         return "I don't know anything about cyan.";
 
+    } else if (color === 'purple') { //added
+        return "I don't know anything about " + color; //added
+
     } else {
         return "I don't know anything about that color.";
+        //alternate option
+        //return "I don't know anything about " + color;
     }
 }
+
+//alternate option
+//var returnOfFunction = analyzeColor(color: "blue");//change color to "Rose Gold", "green"
+//console.log(returnOfFunction);
+//can use this instead of the code below
+
 console.log(analyzeColor('blue'));
 console.log(analyzeColor('red'));
 console.log(analyzeColor('cyan'));
 console.log(analyzeColor('green'));
+console.log(analyzeColor('purple'));
 
 
 
@@ -89,14 +101,47 @@ console.log(analyzeColor(randomColor));
  */
 
 function analyzeColor(color) {
+    if (color === 'blue') {
+        return "blue is the color of the sky.";
+
+    } else if (color === 'red') {
+        return "Strawberries are red.";//"Strawberries are " + color; alternate option/dynamic message
+
+    } else if (color === 'cyan') {
+        return "I don't know anything about cyan.";
+
+    } else if (color === 'purple') { //added
+        return "I don't know anything about " + color; //added
+
+    } else {
+        return "I don't know anything about that color.";
+        //alternate option
+        //return "I don't know anything about " + color;
+    }
+}
+
+//alternate option
+//var returnOfFunction = analyzeColor(color: "blue");//change color to "Rose Gold", "green"
+//console.log(returnOfFunction);
+//can use this instead of the code below
+
+console.log(analyzeColor('blue'));
+console.log(analyzeColor('red'));
+console.log(analyzeColor('cyan'));
+console.log(analyzeColor('green'));
+console.log(analyzeColor('purple'));
+
+//draft next question
+
+function analyzeColor(color) {
 
     switch(color) {
         case 'blue':
             return "blue is the color of the sky.";
-            break;
+            break;  //note: since return is used, break is unreachable, any code below the return
         case 'red':
             return "Strawberries are red.";
-            break;
+            break;//not necessary to use the break since a return is used
         case 'cyan':
             return "I don't know anything about cyan.";
             break;
@@ -133,9 +178,13 @@ function analyzeColor(color) {
             return "I don't know anything about that color.";
     }
 }
-var color_in = prompt("Please select a color.");
+var color_in = prompt("Please select a color.");//alternate name userColor
 var color_out = analyzeColor(color_in); //or message_out to show back to the user
 alert(color_out);
+
+//alternate option
+//var userColor = prompt(message: "Give me a color.");
+//alert(analyzeColor(userColor)); //instead of placing on an alert on a variable TEST!!!
 
 /* ########################################################################## */
 
@@ -164,7 +213,7 @@ function calculateTotal(luckyNumber, totalAmount) {
     //var discountPercentage = discounts[luckyNumber]; //evaluates index equivalent to discounts[4] = 0.5
     //var discountAmount = totalAmount * discountPercentage;
     //return totalAmount - discountAmount;
-    return totalAmount - totalAmount * discounts[luckyNumber];
+    return totalAmount - totalAmount * discounts[luckyNumber]; //discount based on [luckyNumber index]
 
 }
 
@@ -189,6 +238,36 @@ console.log(calculateTotal(5, 1000));
 //return 100 - 50
 //return 50
 
+
+//Alternate option using the switch statement:
+function calculateTotal(luckyNumber, totalAmount) {
+
+    //var discount;
+
+    switch (luckyNumber) {
+        case 0:
+            return totalAmount;
+        case 1:
+            var discount = (totalAmount * .1);// discount = (totalAmount * .1);
+            return totalAmount - discount;
+        case 2:
+            var discount = (totalAmount * .25);
+            return totalAmount - discount;
+        case 3:
+            var discount = (totalAmount * .35);
+            return
+        case 4:
+            var discount = (totalAmount * .5);
+            return
+        case 5:
+            var discount = (totalAmount * 1);
+            return 0;
+    }
+
+}
+
+console.log(calculateTotal(luckyNumber 3, totalAmount 90));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -206,7 +285,9 @@ function calculateTotal(luckyNumber, totalAmount) {
 }
 
 var totalAmount = prompt("Please enter bill amount.");
-var luckyNumber = Math.floor(Math.random() * 6);//random number between 0 and 5
+var luckyNumber = Math.floor(Math.random() * 6);//selects random number between 0 and 5
+//Math.random() selects a number between 0 and 1, Math.floor() rounds to a whole number
+//There are 6 discounts listed in the array, starting position at 0
 alert("Your lucky number is " + luckyNumber);
 alert("Your bill before the discount is " + totalAmount);
 alert("Your bill after the discount is " + calculateTotal(luckyNumber, totalAmount));
@@ -220,6 +301,22 @@ alert("Your bill after the discount is " + calculateTotal(luckyNumber, totalAmou
 //     var calculatedTotal = billTotal
 //     //return applyDiscount (price * discountPercent);
 // }
+
+
+
+//alternate solution
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var usersTotalBill = Number(prompt("What was your total bill?"));
+
+var discountedBill = calculateTotal(luckyNumber, usersTotalBill);
+
+alert("Your lucky number was ", + luckyNumber);
+alert("Your price before the discount was $" + usersTotalBill) + " However with the discount you only pay + discountedBill;
+
+
+
+
 //
 // var LuckyNumber = parseInt(prompt("Enter Your Lucky Number - Between 0 and 5!"));
 //
@@ -280,7 +377,8 @@ alert("Your bill after the discount is " + calculateTotal(luckyNumber, totalAmou
  * HINT: The way we prompt for a value could be improved
  */
 
-var enterNumber = confirm("Would you like to enter a number?");
+var enterNumber = confirm("Would you like to enter a number?");//Dialog box prompts user to select Ok || Cancel
+//depending on what the user clicks on, evaluates to true or false
 if (enterNumber){
     var number = prompt("Please enter a number.");
     //number = parseInt(number);
@@ -293,12 +391,12 @@ if (enterNumber){
         } else {
             alert("Your number is odd.");
         }
-        alert("Your number + 100 is " + (parseInt(number) + 100));//remove parse(Int) here + (number + 100));
+        alert("Your number + 100 is " + (parseInt(number) + 100));//can remove parse(Int) here + (number + 100));
 
         if (number > 0) {
             alert("Your number is positive.");
         } else {
-            alert("Your number is negative.");
+            alert("Your number is negative."); //an additional if statement could be applied here.
         }
     }
 }
@@ -320,5 +418,51 @@ function doNumberStuff(someNumber) {
     }
 }
 
+//alternate solution by TA
+
+function isEven(userNumber)) { //incomplete
+    return num % 2 === 0;
+
+}
+
+var userConfirmed = confirm("Would you like to enter a number?");//click ok variable is = true
+
+if (userConfirmed) {
+    // The user wants to play
+
+    var userNumber = Number(prompt("Give me a number."));
+
+    console.log(userNumber);
+
+    console.log(typeof userNumber);
+
+    if (!isNaN(userNumber));
+
+    //if(!isNaN(userNumber)) {
+        // can also use typeof
+     if (typeof userNumber === "number"); {
+
+     }
+
+    if (userNumber % 2 === 0) {
+        alert("Your number is Even.");
+    } else {
+        alert("Your number is Odd.");
+    }
+    alert("Your number plus 100 is " + (userNumber + 100));//adds two numbers then concatenate with string
+
+    //ternary operator
+    var numberPosOrNeg = (userNumber > 0) ? "positive" : "negative";
+
+    alert("Your number is " + numberPosOrNeg + ".");
+
+} else {
+    alert("Hey, that is not a  number");
+
+    alert("Your number is " + numberPosOrNeg + ".");
+
+} else {
+    // The user does not want to play
+}
 
 
