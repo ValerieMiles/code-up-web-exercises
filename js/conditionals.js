@@ -28,10 +28,9 @@ function analyzeColor(color){
 
 if (color === 'blue'){
     //console.log("blue is the color of the sky.");
-    return "blue is the color of the sky.";
+    return "Blue is the color of the sky.";
 
-
-} else if (color === 'red'){/
+} else if (color === 'red'){
     //console.log("Strawberries are red.");
 
 } else if (color === 'cyan'){
@@ -43,7 +42,7 @@ if (color === 'blue'){
 
 console.log(analyzeColor('blue');
 console.log(analyzeColor('red');
-console.log (analyzeColor('cyan')
+console.log (analyzeColor('cyan');
 
 
 
@@ -91,11 +90,24 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 function analyzeColor(color){
-    if (color === 'blue')
-}
+    if (color === 'blue'){
+        return "blue is the color of the sky.";
+
+    } else if (color === 'red'){
+        //console.log("Strawberries are red.");
+
+    } else if (color === 'cyan'){
+        console.log("I don't know anything about cyan.");
+
+    }else {
+        console.log("I don't know anything about that color");
+    }
+
+    console.log(analyzeColor('blue');
+    console.log(analyzeColor('red');
+    console.log (analyzeColor('cyan');
 
 }
-
 
 console.log(randomColor);
 console.log(analyzeColor(randomColor));
