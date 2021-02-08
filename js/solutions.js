@@ -1,11 +1,11 @@
-function isTrue(input){
+function isTrue(input) {
     return input === true;
 }
 console.log(isTrue(true));
 console.log(isTrue(false));
 console.log(isTrue(0));
 console.log(isTrue(null));
-console.log(isTrue("true""));
+console.log(isTrue("true"));
 console.log(isTrue("Banana"));
 console.log(isTrue([1, 2]));
 
